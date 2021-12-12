@@ -1,0 +1,151 @@
+ int bakiye = 35055;
+            int hak = 3;
+
+            Console.WriteLine("OWN BANK'A HOŞ GELDİNİZ. LÜTFEN GİRİŞ YAPINIZ.");
+            Console.WriteLine("WELCOME TO OWN BANK. PLEASE LOGİN");
+
+            while (true)
+            {
+                Console.WriteLine("KULLANICI ADINIZI GİRİNİZ (ENTER YOUR USERNAME)");
+                string kullanici = Console.ReadLine();
+
+                Console.WriteLine("LÜTFEN ŞİFRENİZİ GİRİNİZ (ENTER YOUR PASSWORD)");
+                string password = Console.ReadLine();
+
+                if (kullanici == "erdinc" && password == "yalova")
+                {
+                    Console.WriteLine("GİRİŞ BAŞARILI! ANA SAYFAYA YÖNLENDİRİLİYORSUNUZ.");
+                    Console.ReadLine();
+
+                basa:
+                baskaislemegit:
+                    Console.Clear();
+
+                    Console.WriteLine("YAPMAK İSTEDİĞİNİZ İŞLEMİ SEÇİNİZ");
+                    Console.WriteLine("1-BAKİYE / 2-PARA YATIR / 3-PARA ÇEK");
+                    string islem = Console.ReadLine();
+
+                    if (islem == "1")
+
+                    {
+                        Console.WriteLine("MEVCUT BAKİYENİZ: " + bakiye + "TL");
+                        Console.ReadLine();
+
+                        Console.WriteLine("BAŞKA İŞLEM YAPMAK İSTER MİSİNİZ?  E/H");
+
+                        char tercih_e_h = Convert.ToChar(Console.ReadLine());
+
+                        if (tercih_e_h == 'e')
+                        {
+                            goto baskaislemegit;
+                        }
+
+
+                    }
+
+                    else if (islem == "2")
+                    {
+                        Console.WriteLine("LÜTFEN YATIRMAK İSTEDİĞİNİZ TUTARI GİRİNİZ.");
+                        int yatir = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("HESABINIZA " + yatir + "TL YATIRDINIZ. MEVCUT BAKİYENİZ: " + (bakiye + yatir) + "TL.");
+                        Console.ReadLine();
+                        Console.WriteLine("BAŞKA İŞLEM YAPMAK İSTER MİSİNİZ?   E/H");
+                        string tercih = Console.ReadLine();
+                        if (tercih == "e")
+                        {
+                            goto baskaislemegit;
+                        }
+                    }
+                    else if (islem == "3")
+                    {
+                    cekedon:
+                        Console.WriteLine("ÇEKMEK İSTEDİĞİNİZ TUTARI GİRİNİZ");
+                        long cek = Convert.ToInt64(Console.ReadLine());
+
+
+                        if (cek <= bakiye)
+                        {
+                            Console.WriteLine("PARAA ÇEKME BAŞARILI. KALAN BAKİYENİZ: " + (bakiye - cek) + "TL.");
+                            Console.ReadLine();
+                        dene1:
+                            Console.WriteLine("BAŞKA İŞLEM YAPMAK İSTER MİSİNİZ?    E/H");
+                            string cb = Console.ReadLine();
+
+                            if (cb == "e")
+                            {
+                                goto baskaislemegit;
+                            }
+
+                            else if (cb == "h")
+                            {
+                                Console.WriteLine("ÇIKIŞ YAPILDI. İYİ GÜNLER DİLERİZ. KAPATMAK İÇİN 'ENTER' TUŞUNA BAS.");
+                            }
+
+                            else
+                            {
+                                Console.WriteLine("HATALI GİRİŞ! BİR DAHA DENE.");
+                                goto dene1;
+                            }
+                        }
+
+
+
+                        else if (cek > bakiye)
+                        {
+                            Console.WriteLine("YETERSİZ BAKİYE! HESABINIZDAN " + bakiye + "TL ÇEKEBİLİRSİNİZ.");
+                        dene:
+                            Console.WriteLine("YENİDEN DENEME İÇİN 'D' TUŞUNA BASINIZ.");
+                            Console.WriteLine("BAŞKA İŞLEM YAPMAK İÇİN 'e' TUŞUNA BASINIZ");
+                            Console.WriteLine("ÇIKIŞ YAPMAK İÇİN 'h' TŞUNA BASINIZ.");
+
+                            string yd = Console.ReadLine();
+
+                            if (yd == "D")
+                            {
+                                goto cekedon;
+                            }
+
+                            else if (yd == "e")
+                            {
+                                goto baskaislemegit;
+                            }
+
+                            else if (yd == "h")
+                            {
+                                Console.WriteLine("ÇIKIŞ YAPILDI. İYİ GÜNLER DİLERİZ. KAPATMAK İÇİN 'enter' TUŞUNA BASINIZ.");
+                            }
+
+                            else
+                            {
+                                Console.WriteLine("HATALI GİRİŞ YAPTINIZ. LÜTFEN BİR DAHA DENEYİNİZ");
+                                goto dene;
+                            }
+                        }
+                        break;
+
+                    }
+
+
+
+                    else
+                    {
+                        Console.WriteLine("HATALI İŞLEM. BİR DAHA DENE;");
+                        Console.ReadLine();
+                        goto basa;
+
+                    }
+                }
+
+
+                else if (hak > 0)
+                {
+                    Console.WriteLine("HATALI GİRİŞ YAPTINIZ. KALAN DENEME HAKKINIZ: " + hak--);
+                    if (hak == 0)
+                    {
+                        Console.WriteLine("DENEME HAKKINIZ DOLMUŞTUR! HESABINIZI YENİDEN AÇTIRMAK İÇİN EN YAKIN ŞUBEMİZE GİDEBİLİRSİNİZ!");
+                        Console.ReadLine();
+                        break;
+                    }
+                }
+            }
