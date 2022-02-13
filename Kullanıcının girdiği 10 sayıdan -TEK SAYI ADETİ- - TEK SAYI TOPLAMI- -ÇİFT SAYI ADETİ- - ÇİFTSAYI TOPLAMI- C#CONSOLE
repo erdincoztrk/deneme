@@ -1,0 +1,40 @@
+  int[] sayilar = new int[10];
+
+            int tektoplam = 0;
+            int tekadet = 0;
+
+            int cifttoplam = 0;
+            int ciftadet = 0;
+            int kullanicideger;
+
+            for (int i = 0; i<sayilar.Length; i++)
+            {
+                Console.Write((i + 1) + ". SAYIYI GİRİNİZ: ");
+                kullanicideger = Convert.ToInt32(Console.ReadLine());
+                sayilar[i] = kullanicideger;
+            }
+
+            for (int j = 0; j < sayilar.Length; j++)
+            {
+                if ( sayilar[j] % 2 == 0)
+                {
+                    cifttoplam += sayilar[j];
+                    ciftadet++;
+                    
+                }
+
+                else if (sayilar[j] % 2 == 1)
+                {
+                    tektoplam += sayilar[j];
+                    tekadet++;
+                    
+                }
+                
+            }
+            Console.WriteLine("");
+            Console.WriteLine("Teklerin toplamı: " + tektoplam);
+            Console.WriteLine("Teklerin adeti: " +tekadet);
+            Console.WriteLine("");
+            Console.WriteLine("Çiftlerin toplamı: " +cifttoplam);
+            Console.WriteLine("Çiftlerin adeti: " + ciftadet);
+            Console.ReadLine();
