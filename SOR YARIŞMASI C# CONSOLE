@@ -1,0 +1,100 @@
+Console.WriteLine("SORU-1: 5X10 KAÇ EDER ");
+            Console.WriteLine("");
+            Console.Write("CEVAP: ");
+            string cevap = Console.ReadLine();
+
+            if (cevap == "50")
+            {
+                Console.WriteLine("TEBRİKLER DOĞRU CEVAP VERDİNİZ.");
+            }
+
+            else
+            {
+                Console.WriteLine("YANLIŞ CEVAP VERDİNİZ.");
+            }
+            Console.ReadLine();
+
+            Console.Clear();
+
+            Console.WriteLine("SORU-1: BİR SEPETTE 10 ELMA VAR. SEPETİN ALTI ÇIKTI KAÇ ELMA KALDI");
+            Console.WriteLine("");
+            Console.Write("CEVAP: ");
+            string cvp = Console.ReadLine();
+
+            if (cevap == "0")
+            {
+                Console.WriteLine("TEBRİKLER! DOĞRU CEVAP VERDİNİZ.");
+            }
+
+            else
+            {
+                Console.WriteLine("YANLIŞ CEVAP VERDİNİZ.");
+            }
+            Console.ReadLine();
+
+            Console.Clear();
+
+            Console.WriteLine("SORU-3: DAĞ KEÇİSİ OLARAK BİLİNEN ARAÇ HANGİSSİDİR");
+            Console.WriteLine("A) TOROS");
+            Console.WriteLine("B) HYUNDAİ");
+            Console.WriteLine("C) MITSUBISHI");
+            Console.WriteLine("D) MERCEDES");
+            Console.WriteLine("");
+            Console.Write("CEVAP:");
+            string cvpp = Console.ReadLine();
+
+            if (cvpp == "A" || cvp == "a")
+            {
+                Console.WriteLine("TEBRİKLER DOĞRU CEVAP VERDİNİZ.");
+            }
+
+            else
+                {
+                Console.WriteLine("YANLIŞ CEVAP VERDİNİZ.");
+            }
+            Console.ReadLine();
+
+            Console.Clear();
+
+            Console.WriteLine("SORU-4: KAMYON, DOZER GİBİ BÜYÜK ULAŞIM ARAÇLARI HANGİ YAKIT İLE ÇALIŞIR.");
+            Console.WriteLine("A) GAZ");
+            Console.WriteLine("B) BENZİN");
+            Console.WriteLine("C) MAZOT");
+            Console.WriteLine("D) ELEKTRİK");
+
+            Console.WriteLine("");
+
+            Console.Write("CEVAP: ");
+            string cevap4 = Console.ReadLine();
+            Console.WriteLine("");
+            if (cevap4 == "c" || cevap4 == "C")
+            {
+                Console.WriteLine("TEBRİKLER! DOĞRU CEVAP VERDİNİZ.");
+            }
+            else
+            {
+                Console.WriteLine("YANLIŞ CEVAP VERDİNİZ.");
+            }
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.WriteLine("SORU-5: TÜRKİYE CUMHURİYETİ KAÇ YILINDA KURULMUŞTUR?");
+            Console.WriteLine("A) 1922");
+            Console.WriteLine("B) 1920");
+            Console.WriteLine("C) 1923");
+            Console.WriteLine("D) 1938");
+            Console.WriteLine("");
+            Console.Write("CEVAP:");
+            string cevap5 = Console.ReadLine();
+            Console.WriteLine("");
+            if (cevap5 == "c" ||cevap5 == "C")
+            {
+                Console.WriteLine("TEBRİKLER! DOĞRU CEVAP VERDİNİZ.");
+            }
+            else
+            {
+                Console.WriteLine("YANLIŞ CEVAP VERDİNİZ.");
+            }
+            Console.WriteLine("");
+            Console.WriteLine("YARIŞMAMIZ BU KADARDIR BİZDEN BİR SAKIZ KAZANDINIZ. SAKIZIN PARASINI ANNENİZDEN ALABİLİRSİNİZ TEBRİKLER.");
+            Console.ReadLine();
